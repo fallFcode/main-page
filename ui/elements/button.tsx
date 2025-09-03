@@ -25,6 +25,7 @@ const button = cva("btn", {
   },
 });
 
+
 export type ButtonType = {
   color?: "primary" | "secondary";
   size?: "small" | "medium" | "large";
