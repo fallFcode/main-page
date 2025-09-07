@@ -5,15 +5,24 @@ type HeadingTopicProps = {
   className?: string;
   title: string;
   children: React.ReactNode;
+  childrenHeading: React.ReactNode;
 };
 
-const HeadingTopic = ({ title, className, children }: HeadingTopicProps) => {
+const HeadingTopic = ({
+  title,
+  className,
+  children,
+  childrenHeading,
+}: HeadingTopicProps) => {
   return (
     <section className={cn("w-full h-full flex flex-col gap-4", className)}>
       <div className="mb-12 "></div>
-      <Heading as="h2" className="w-[80%] flex mx-auto">
-        {title}
-      </Heading>
+      <div className="flex justify-between w-[80%] mx-auto ">
+        <Heading as="h3" className="font-semibold flex ">
+          {title}
+        </Heading>
+        <div>{childrenHeading}</div>
+      </div>
       <div className="flex flex-col justify-center items-center">
         {children}
       </div>

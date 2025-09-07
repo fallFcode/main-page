@@ -8,8 +8,9 @@ type HeadingProps = {
 
 export function Heading({ as = "h1", children, ...props }: HeadingProps) {
   const Tag = as;
+
   return (
-    <Tag className={cn("font-semibold")} {...props}>
+    <Tag className={cn("font-bold ")} {...props}>
       {children}
     </Tag>
   );

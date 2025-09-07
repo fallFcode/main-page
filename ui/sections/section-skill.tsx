@@ -1,5 +1,4 @@
-
-import HeadingTopic from "./heading-topic";
+import HeadingTopic from "../components/heading-topic";
 
 import IconSkill from "../components/icon-skill";
 

@@ -17,7 +17,7 @@ const SectionMain = (props: sectionMainProps) => {
         >
           SANDY FRASUTIO
         </Heading>
-        <span>Full Stack & 3D Enthusiast</span>
+        <span>Full Stack & <span className="text-tertiary">3D Enthusiast</span></span>
       </div>
 
       <div className="flex w-[80%] h-full justify-center items-end">
