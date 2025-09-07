@@ -1,11 +1,14 @@
+import { cn } from "@/utils/cn";
 import * as React from "react";
 import { IoLogoReact } from "react-icons/io5";
 
-type IconProps = {};
+type IconProps = {
+  className?: string;
+};
 
-const Icon = (props) => {
+const Icon = ({ className }: IconProps) => {
   return (
-    <div className="p-2 text-4xl bg-stone-500 rounded-xl flex ">
+    <div className={cn("p-2 text-4xl bg-stone-500 rounded-xl grid place-content-center", className)}>
       <IoLogoReact />
     </div>
   );

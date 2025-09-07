@@ -5,7 +5,7 @@ type HeadingTopicProps = {
   className?: string;
   title: string;
   children: React.ReactNode;
-  childrenHeading: React.ReactNode;
+  childrenHeading?: React.ReactNode;
 };
 
 const HeadingTopic = ({
