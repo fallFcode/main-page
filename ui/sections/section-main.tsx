@@ -1,32 +1,43 @@
 import Link from "next/link";
 import * as React from "react";
 import { Heading } from "../elements/heading";
+import Description from "../elements/description";
+import Button from "../elements/button";
 
 type sectionMainProps = {};
 
 const SectionMain = (props: sectionMainProps) => {
   return (
     <section className="flex flex-col items-center h-screen w-full p-4 pb-0">
-      <Link href="/" className="h-full w-full flex flex-start font-semibold">
-        Logo
-      </Link>
-      <div className="flex flex-col items-center ">
-        <Heading
-          as="h1"
-          className="text-4xl font-semibold h-full w-full justify-center items-center"
-        >
+      <div className="flex w-full items-center justify-between">
+        <Link href="/" className="h-full flex flex-start font-semibold">
+          Logo
+        </Link>
+        <div className="flex justify-center">
+          <ul className="w-full flex rounded-t-full gap-4 items-end justify-center p-2 text-md">
+            <li>
+              <Link href={"/"}>Project</Link>
+            </li>
+            <li>
+              <Link href={"/"}>Skill</Link>
+            </li>
+            <li>
+              <Link href={"/"}>About</Link>
+            </li>
+          </ul>
+        </div>
+
+        <Button color="secondary" style={"solid"}>
+          Get Contact
+        </Button>
+      </div>
+      <div className="flex flex-col h-full items-center justify-center ">
+        <Heading as="h1" className="">
           SANDY FRASUTIO
         </Heading>
-        <span>Full Stack & <span className="text-tertiary">3D Enthusiast</span></span>
-      </div>
-
-      <div className="flex w-[80%] h-full justify-center items-end">
-        <div className="w-full flex bg-stone-900 rounded-t-full gap-4 items-end justify-center p-2 text-md">
-          <Link href={"/"}>Project</Link>
-          <Link href={"/"}>Skill</Link>
-          <Link href={"/"}>About</Link>
-          <Link href={"/"}>Contact</Link>
-        </div>
+        <Description>
+          Full Stack & <span className="text-tertiary">3D Enthusiast</span>
+        </Description>
       </div>
     </section>
   );

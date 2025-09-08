@@ -1,7 +1,6 @@
 import { cva } from "class-variance-authority";
 import * as React from "react";
 
-
 const button = cva("btn", {
   variants: {
     size: {
@@ -10,13 +9,14 @@ const button = cva("btn", {
       large: "px-6 py-3 text-lg",
     },
     color: {
-      primary: "bg-blue-600 text-white hover:bg-blue-700",
-      secondary: "bg-gray-600 text-white hover:bg-gray-700",
+      primary: "bg-primary text-white hover:bg-secondary",
+      secondary: "bg-secondary text-white hover:bg-primary",
+      tertiary: " bg-tertiary text-white hover:bg-gray-700",
     },
     style: {
-      solid: "border-none",
-      outline: "border border-gray-300 bg-transparent",
-      ghost: "bg-transparent hover:bg-gray-100",
+      solid: "border-none rounded-xl",
+      outline: "border border-gray-300 bg-transparent rounded-xl",
+      ghost: "bg-transparent hover:bg-gray-900",
     },
   },
   defaultVariants: {
@@ -25,17 +25,33 @@ const button = cva("btn", {
   },
 });
 
-
 export type ButtonType = {
-  color?: "primary" | "secondary";
+  color?: "primary" | "secondary" | "tertiary";
   size?: "small" | "medium" | "large";
+  style: "solid" | "outline" | "ghost";
+  onClick?: () => void;
   icon: React.ReactNode;
   children: React.ReactNode;
 };
 
-const Button = ({ color, size, icon, children }: ButtonType) => {
+const Button = ({
+  color,
+  size,
+  icon,
+  style,
+  children,
+  ...props
+}: ButtonType & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <button className={button({ color, size })}>
+    <button
+      className={button({
+        color,
+        size,
+        style,
+        className: "flex-center gap-2 flex-wrap cursor-pointer",
+      })}
+      {...props}
+    >
       {icon}
       {children}
     </button>
