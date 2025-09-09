@@ -50,7 +50,7 @@ const HeadingTopic = ({
       <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-[80%]  z-0">
         <div
           className={cn(
-            "w-full h-screen flex-center text-[35vh] sticky top-0 text-center font-bold outline-text",
+            "w-full h-screen flex-center text-[20vw] sticky top-0 text-center font-bold outline-text select-none text-tertiary",
             inter.className
           )}
         >

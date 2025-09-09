@@ -16,7 +16,7 @@ export default function Home() {
         <SectionMain />
         <section className="flex flex-col items-center h-fit w-full bg-background relative">
           <div className="flex w-[80%] sticky top-0 left-0 mx-auto right-0 z-20">
-            <div className="w-full flex bg-secondary rounded-full gap-4 items-end justify-center p-2 text-md mt-2">
+            <div className="w-full flex rounded-full gap-4 items-end justify-center p-2 text-md mt-2 bg-secondary/30 backdrop-blur-md   shadow-lg">
               <Link href={"/"}>Project</Link>
               <Link href={"/"}>Skill</Link>
               <Link href={"/"}>About</Link>

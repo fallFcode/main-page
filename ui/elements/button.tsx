@@ -1,4 +1,6 @@
+import { cn } from "@/utils/cn";
 import { cva } from "class-variance-authority";
+import { ClassValue } from "clsx";
 import * as React from "react";
 
 const button = cva("btn", {
@@ -28,9 +30,10 @@ const button = cva("btn", {
 export type ButtonType = {
   color?: "primary" | "secondary" | "tertiary";
   size?: "small" | "medium" | "large";
-  style: "solid" | "outline" | "ghost";
+  className?: ClassValue;
+  styleButton: "solid" | "outline" | "ghost";
   onClick?: () => void;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   children: React.ReactNode;
 };
 
@@ -39,6 +42,7 @@ const Button = ({
   size,
   icon,
   style,
+  className,
   children,
   ...props
 }: ButtonType & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
@@ -48,7 +52,7 @@ const Button = ({
         color,
         size,
         style,
-        className: "flex-center gap-2 flex-wrap cursor-pointer",
+        className: cn("flex-center gap-2 flex-wrap cursor-pointer", className),
       })}
       {...props}
     >
