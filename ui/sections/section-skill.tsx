@@ -6,18 +6,20 @@ import PomodoroImage from "@/public/avin-cp-OlXUUQedQyM-unsplash.jpg";
 
 const SectionSkill = () => {
   return (
-    <HeadingTopic title="Skill" className="h-screen">
+    <HeadingTopic title="Skill" className="h-[500vh]" classNameMargin="mt-[160vh]">
       <div className="flex mx-auto w-[80%] h-fit">
         <IconSkill />
-        <div className="flex h-full w-full rounded-xl ">
-          <div className="overflow-hidden rounded-xl w-full h-full">
-          <Image
-            src={PomodoroImage}
-            alt="Pomodoro"
-            className="object-cover w-full h-full"
-          />
-
+        <div className="flex h-full w-full rounded-xl relative">
+          <div className="overflow-hidden rounded-xl w-full h-full z-10">
+            <div className="h-full w-full">
+              <Image
+                src={PomodoroImage}
+                alt="Pomodoro"
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
+          <div className="absolute h-full w-full border-tertiary border-2 z-0 rounded-xl translate-x-8 translate-y-4 ">asdsad</div>
         </div>
       </div>
     </HeadingTopic>

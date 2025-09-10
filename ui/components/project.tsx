@@ -2,21 +2,22 @@ import Image from "next/image";
 import { Heading } from "../elements/heading";
 import { useStore } from "@/utils/store-func";
 import * as React from "react";
+import Button from "../elements/button";
 
 type projectItemProps = {
   title: string;
-  image: StaticImageData;
+  image: string;
 };
 
 const ProjectItem = ({ title, image }: projectItemProps) => {
   const { isDetail, openDetail, closeDetail } = useStore();
 
   return (
-    <div
-      className="flex h-36 w-[80%] rounded-xl overflow-hidden outline-1 outline-offset-10"
+    <button
+      className="flex h-36 w-[80%] rounded-xl overflow-hidden hover:cursor-pointer hover:outline-1 outline-offset-10 mt-8"
       onClick={openDetail}
     >
-      <div className="flex flex-col p-4 relative w-full h-full opacity-50">
+      <div className="flex flex-col p-4 relative w-full h-full opacity-50 hover:opacity-100">
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <Image
             src={image}
@@ -30,7 +31,7 @@ const ProjectItem = ({ title, image }: projectItemProps) => {
           </Heading>
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
