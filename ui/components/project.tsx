@@ -14,7 +14,7 @@ const ProjectItem = ({ title, image }: projectItemProps) => {
 
   return (
     <button
-      className="flex h-36 w-[80%] rounded-xl overflow-hidden hover:cursor-pointer hover:outline-1 outline-offset-10 mt-8"
+      className="flex  rounded-xl overflow-hidden hover:cursor-pointer hover:outline-1 outline-offset-10 mt-8"
       onClick={openDetail}
     >
       <div className="flex flex-col p-4 relative w-full h-full opacity-50 hover:opacity-100">
@@ -35,4 +35,5 @@ const ProjectItem = ({ title, image }: projectItemProps) => {
   );
 };
 
-export default ProjectItem;
+export default ProjectItem; 
+    

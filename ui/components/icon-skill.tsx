@@ -10,14 +10,15 @@ const iconDev = [
 ];
 
 const IconSkill = () => {
-  const IconMotion = motion.create(Icon)
+  const IconMotion = motion.create(Icon);
   return (
-    <div className="flex-wrap rounded-xl flex w-full">
-      <motion.div className="flex flex-wrap justify-center gap-4"
-      transition={{}}
+    <div className="flex w-full flex-wrap rounded-xl">
+      <motion.div
+        className="flex flex-wrap justify-center gap-4 h-fit"
+        transition={{}}
       >
         {iconDev.map((icon, index) => (
-          <Icon key={index}  className="aspect-square w-16 h-16 ">
+          <Icon key={index} >
             {icon}
           </Icon>
         ))}

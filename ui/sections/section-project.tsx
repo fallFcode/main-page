@@ -13,10 +13,7 @@ const SectionProject = () => {
   const { isDetail, openDetail, closeDetail } = useStore();
   console.log(isDetail);
   return (
-    <HeadingTopic
-      title="Project"
-      className=" h-[160vh]"
-    >
+    <HeadingTopic title="Project" className="h-screen">
       {isDetail && (
         <div className="absolute top-0 right-[0%] w-full h-full bg-background z-40 flex flex-col justify-between p-8">
           <div className="flex">
@@ -35,7 +32,11 @@ const SectionProject = () => {
         </div>
       )}
 
-      <ProjectItem image={PomodoroImage} title="Pomodorosdsdsddssdsdssd" />
+      <div className="flex h-36 w-[80%] mx-auto justify-center px-32">
+        
+        <ProjectItem image={PomodoroImage} title="Pomodorosdsdsddssdsdssd" />
+        
+      </div>
     </HeadingTopic>
   );
 };

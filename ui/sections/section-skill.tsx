@@ -6,7 +6,7 @@ import PomodoroImage from "@/public/avin-cp-OlXUUQedQyM-unsplash.jpg";
 
 const SectionSkill = () => {
   return (
-    <HeadingTopic title="Skill" className="h-[500vh]" classNameMargin="mt-[160vh]">
+    <HeadingTopic title="Skill" className="" classNameMargin="">
       <div className="flex mx-auto w-[80%] h-fit">
         <IconSkill />
         <div className="flex h-full w-full rounded-xl relative">

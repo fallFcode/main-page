@@ -4,12 +4,17 @@ import { IoLogoReact } from "react-icons/io5";
 
 type IconProps = {
   className?: string;
-  children:React.ReactNode
+  children: React.ReactNode;
 };
 
-const Icon = ({ children,className }: IconProps) => {
+const Icon = ({ children, className }: IconProps) => {
   return (
-    <div className={cn("p-2 text-4xl bg-stone-500 rounded-xl grid place-content-center", className)}>
+    <div
+      className={cn(
+        "bg-secondary grid aspect-square w-12 place-content-center rounded-xl p-0 text-xl md:p-1 md:text-2xl lg:text-4xl",
+        className,
+      )}
+    >
       {children}
     </div>
   );

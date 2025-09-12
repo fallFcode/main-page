@@ -20,7 +20,7 @@ const SectionAbout = () => {
     <HeadingTopic title="About">
       <div ref={containerRef} className="flex h-[400vh] w-[80%] mx-auto">
         <div className="flex w-full"></div>
-        <div className="flex w-full flex-col">
+        <div className="flex w-full flex-col prose-xl">
           <Heading as="h3">Sandy Frasutio</Heading>
           <Description>
             A passionate web developer with a knack for creating dynamic and

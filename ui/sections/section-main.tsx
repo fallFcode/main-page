@@ -6,38 +6,40 @@ import Button from "../elements/button";
 import { loadLinksPreset } from "@tsparticles/preset-links";
 import Particle from "../elements/particle";
 import { IoCompassOutline } from "react-icons/io5";
+import { motion } from "motion/react";
 
 type sectionMainProps = {};
 
 const SectionMain = (props: sectionMainProps) => {
   return (
-    <section className="flex flex-col items-center h-screen w-full p-4 pb-0">
-      <div className="flex items-center justify-between mx-auto w-[80%] z-10">
-        <Link href="/" className="h-full flex flex-start font-semibold">
-          Logo
-        </Link>
-        <div className="flex justify-center">
-          <ul className="w-full flex rounded-t-full gap-4 items-end justify-center p-2 text-md">
-            <li>
-              <Link href={"/"}>Project</Link>
-            </li>
-            <li>
-              <Link href={"/"}>Skill</Link>
-            </li>
-            <li>
-              <Link href={"/"}>About</Link>
-            </li>
-          </ul>
-        </div>
+    <section className="sticky-section h-[180vh] w-full">
+      <div className="flex h-full w-full flex-col items-center p-4 pb-0">
+        <div className="z-10 mx-auto flex w-[80%] items-center justify-between">
+          <Link href="/" className="flex-start flex h-full font-semibold">
+            Logo
+          </Link>
+          <div className="flex justify-center">
+            <ul className="text-md flex w-full items-end justify-center gap-4 rounded-t-full p-2">
+              <li>
+                <Link href={"/"}>Project</Link>
+              </li>
+              <li>
+                <Link href={"/"}>Skill</Link>
+              </li>
+              <li>
+                <Link href={"/"}>About</Link>
+              </li>
+            </ul>
+          </div>
 
-        <Button color="tertiary" style={"solid"}>
-          Get Contact
-        </Button>
-      </div>
-      <div className="flex flex-col h-full items-center justify-center relative w-[80%]">
-        <div className="absolute overflow-hidden w-full h-full mx-auto z-0 flex flex-col justify-between">
-          <Particle />
-          {/* <HeadingGiantMotion
+          <Button color="tertiary" style={"solid"}>
+            Get Contact
+          </Button>
+        </div>
+        <div className="relative flex h-screen w-[80%] flex-col items-center justify-center">
+          <div className="absolute z-0 mx-auto flex h-full w-full flex-col justify-between overflow-hidden">
+            <Particle />
+            {/* <HeadingGiantMotion
             className={"-rotate-45 -translate-y-52"}
             initial={{ x: -250 }}
             animate={{ x: 400 }}
@@ -53,22 +55,23 @@ const SectionMain = (props: sectionMainProps) => {
           >
             DEVELOPER
           </HeadingGiantMotion> */}
-        </div>
-        <Heading as="h1" className="z-10">
-          SANDY FRASUTIO
-        </Heading>
-        <Description className="z-10 text-xl">
-          Full Stack & <span className="text-tertiary">3D Enthusiast</span>
-        </Description>
-        <div className="z-10">
-          <Button
-            styleButton="solid"
-            color="tertiary"
-            className="mt-4 rounded-xl"
-            icon={<IoCompassOutline/>}
-          >
-            Explore
-          </Button>
+          </div>
+          <Heading as="h1" className="z-10">
+            SANDY FRASUTIO
+          </Heading>
+          <Description className="z-10 text-xl">
+            Full Stack & <span className="text-tertiary">3D Enthusiast</span>
+          </Description>
+          <div className="z-10">
+            <Button
+              styleButton="solid"
+              color="tertiary"
+              className="mt-4 rounded-xl"
+              icon={<IoCompassOutline />}
+            >
+              Explore
+            </Button>
+          </div>
         </div>
       </div>
     </section>
