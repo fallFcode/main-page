@@ -9,12 +9,13 @@ import { useScroll, useTransform } from "motion/react";
 import Link from "next/link";
 import { ReactLenis, useLenis } from "lenis/react";
 import { useEffect } from "react";
+import NavBarBlur from "@/ui/components/navbar-blur";
 
 export default function Home() {
   const { scrollY } = useScroll();
   useEffect(() => {
-    console.log(scrollY)
-    scrollY.setCurrent(200)
+    console.log(scrollY);
+    scrollY.setCurrent(200);
   }, []);
   return (
     <>
@@ -31,12 +32,7 @@ export default function Home() {
               </div>
             </div> */}
 
-              <div className="text-md bg-secondary/30 mt-2 flex w-full items-end justify-center gap-4 rounded-full p-2 shadow-lg backdrop-blur-md">
-                <Link href={"/"}>Project</Link>
-                <Link href={"/"}>Skill</Link>
-                <Link href={"/"}>About</Link>
-                <Link href={"/"}>Contact</Link>
-              </div>
+              <NavBarBlur />
             </div>
             <SectionProject />
             <SectionSkill />

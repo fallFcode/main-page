@@ -27,7 +27,6 @@ const HeadingTopic = ({
 }: HeadingTopicProps) => {
   const rootRef = useRef(null);
   const isInView = useInView(rootRef, { amount: 0.1 });
-  console.log(isInView);
   const HeadingMotion = motion.create(Heading);
   return (
     <motion.section

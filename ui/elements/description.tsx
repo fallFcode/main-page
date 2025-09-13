@@ -4,8 +4,16 @@ import * as React from "react";
 
 type descriptionType = { children: React.ReactNode; className?: ClassValue };
 
-const Description = ({ children, className }: descriptionType) => {
-  return <p className={cn("text-base md:text-md lg:text-lg", className)}>{children}</p>;
+const Description = ({
+  children,
+  className,
+  ...props
+}: descriptionType & React.ButtonHTMLAttributes<HTMLParagraphElement>) => {
+  return (
+    <p className={cn("md:text-md text-base lg:text-lg", className)} {...props}>
+      {children}
+    </p>
+  );
 };
 
 export default Description;

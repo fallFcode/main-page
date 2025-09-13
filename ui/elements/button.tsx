@@ -15,7 +15,7 @@ const button = cva("btn", {
       secondary: "bg-secondary text-white hover:bg-primary",
       tertiary: " bg-tertiary text-white hover:bg-gray-700",
     },
-    style: {
+    styleButton: {
       solid: "border-none rounded-xl",
       outline: "border border-gray-300 bg-transparent rounded-xl",
       ghost: "bg-transparent hover:bg-gray-900",
@@ -41,7 +41,7 @@ const Button = ({
   color,
   size,
   icon,
-  style,
+  styleButton,
   className,
   children,
   ...props
@@ -51,7 +51,7 @@ const Button = ({
       className={button({
         color,
         size,
-        style,
+        styleButton,
         className: cn("flex-center gap-2 flex-wrap cursor-pointer", className),
       })}
       {...props}
